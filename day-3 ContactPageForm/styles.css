@@ -1,3 +1,4 @@
+/* Base page styles */
 body {
     margin: 0;
     padding: 24px;
@@ -8,6 +9,7 @@ body {
     color: black;
 }
 
+/* Heading and intro */
 h1 {
     text-align: center;
     font-size: 35px;
@@ -22,14 +24,66 @@ body p {
     margin-bottom: 16px;
 }
 
+/* Form container card */
 .contact-form {
-    display: flex;
-    max-width: 600px;
-    min-width: none;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 480px;
+    /* narrower card so blue shows both sides */
+    margin: 40px auto;
+    /* equal left & right space */
     background-color: rgb(184, 226, 240);
-    padding: 15px;
+    padding: 20px;
     border-radius: 20px;
-    border: 5px solid black
+    border: 3px solid black;
+}
+
+/* Labels */
+.contact-form label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+/* Inputs + textarea */
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    /* padding stays inside width */
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font: inherit;
+}
+
+/* Focus state */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: darkblue;
+    box-shadow: 0 0 0 2px rgba(0, 0, 139, 0.2);
+}
+
+/* Submit button */
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 999px;
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover + active */
+.contact-form button:hover {
+    background-color: #000066;
+}
+
+.contact-form button:active {
+    transform: scale(0.98);
 }
